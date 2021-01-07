@@ -20,6 +20,8 @@ return function( req )
     if req.method == 'GET' then
     elseif req.method == 'POST' then
         opts[ 'body' ] = req.body
+    elseif req.method == 'PUT' then
+        opts[ 'body' ] = req.body
     else
         error( 'Method not supported: ' .. req.method )
     end
